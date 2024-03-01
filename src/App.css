@@ -18,7 +18,9 @@ h1 {
   letter-spacing: 3px;
   font-family: 'Helvetica Neue', sans-serif; /* Use a different font family */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow */
-  background: linear-gradient(to right,black,black); /* Gradient background */
+  background: linear-gradient(to right,black,black);
+  background-clip: value;
+ /* Gradient background */
   -webkit-background-clip: text; /* Clip text to background */
   -webkit-text-fill-color: transparent; /* Make text transparent */
   padding: 10px; /* Add padding */
