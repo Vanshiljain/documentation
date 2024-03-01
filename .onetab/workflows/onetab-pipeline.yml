@@ -1,0 +1,29 @@
+name: Build React Application
+repoFullName: Vanshiljain-Vanshiljain/documentation
+'on':
+  push:
+    branches:
+      - master
+jobs:
+  run-deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{env.workDir}}
+    strategy:
+      matrix:
+        node-version:
+          - 18.16.0
+    steps:
+      - uses: actions/checkout@v3
+        name: Setup jobs
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        name: Setup environment
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: npm install --global yarn && yarn
+      - name: Building
+        run: yarn run build
