@@ -27,3 +27,5 @@ jobs:
         run: npm install --global yarn && yarn
       - name: Building
         run: yarn run build
+      - name: Deployment
+        run: firebase deploy --token '1//0gULYX7V6H6X2CgYIARAAGBASNwF-L9IrI93CK2X2lioDI82felcXrgqG7TPqLsYMtH3M6QZ5y9sT_GwdHrc-DSQCFEPiNEoH51Y'
