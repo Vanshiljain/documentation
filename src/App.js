@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Sidebar from './components/Sidebar';
+import Introduction from './components/Introduction';
+import Commands from './components/Commands';
+import './App.css'; // Import custom CSS
+import BuildReactApp from './components/BuildReactApp';
+import BuildNextApp from './components/BuildNestJSApp';
+import NpmPublish from './components/NpmPublish';
+import NodeJSbackend from './components/Node-Backend';
+import StarterPipeline from './components/Starter- Pipeline';
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Sidebar />
+        <div className="content">
+        <h1>stg-cli</h1>
+          <Routes>
+            <Route path="/introduction" element={<Introduction />} />
+            <Route path="/commands" element={<Commands />} />
+            <Route path="/Starter-pipeline" element={<StarterPipeline />} />
+            <Route path="/build-react-app" element={<BuildReactApp />} />
+            <Route path="/build-next-app" element={<BuildNextApp />} />
+            <Route path="/build-npm-Publish" element={<NpmPublish/>} />
+            <Route path="/Nodejs-Backend" element={<NodeJSbackend/>} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 

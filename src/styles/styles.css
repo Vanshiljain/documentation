@@ -1,0 +1,92 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light gray */
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background: linear-gradient(to bottom, #007bff, #6c757d); /* Blue to gray gradient */
+    padding: 20px;
+    color: white;
+  }
+  
+  .sidebar h1 {
+    margin-top: 0;
+  }
+  
+  .tablinks {
+    display: block;
+    background-color: #007bff; /* Blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .tablinks:hover {
+    background-color: #0056b3; /* Darker shade of primary color */
+  }
+  
+  .tabcontent {
+    display: none;
+    padding: 20px;
+  }
+  
+  .tabcontent.active {
+    display: block;
+  }
+  
+  /* Sub-tab styles */
+  .subtablinks {
+    background-color: #6c757d; /* Gray */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .subtablinks:hover {
+    background-color: #555; /* Darker shade of secondary color */
+  }
+  
+  .subtabcontent {
+    display: none;
+    padding: 20px;
+  }
+  
+  .subtabcontent.active {
+    display: block;
+  }
+  
+  /* Code block styles */
+  code {
+    background-color: #f0f0f0; /* Light gray */
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+  
+  /* Link styles */
+  a {
+    color: #6c757d; /* Gray */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+ 

@@ -1,0 +1,79 @@
+.sidebar {
+  background-color: #252525;
+  color:black;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+}
+
+.sidebar-header {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-bottom: 1px solid #444;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 10px;
+}
+
+.sidebar-menu li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-menu li a:hover {
+  background-color:blueviolet;
+}
+
+.sidebar-icon {
+  margin-right: 10px;
+}
+
+.sidebar-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-dropdown-icon {
+  margin-left: auto;
+}
+
+.sub-menu {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.sub-menu li {
+  padding: 10px 40px;
+}
+.yaml-config {
+  color: black;
+}
+.sub-menu li a {
+  color:black;
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.sub-menu li a:hover {
+  color:pink;
+}
