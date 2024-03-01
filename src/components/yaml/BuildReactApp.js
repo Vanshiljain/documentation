@@ -5,7 +5,7 @@ const BuildReactApp = () => {
   return (
     <div>
       <h3>Build React Application</h3>
-      <pre>
+      <pre className="code-block">
         <code>
           {`name: Build React Application
 repoFullName: Default Repository
@@ -17,27 +17,28 @@ jobs:
   run-deploy:
     runs-on: ubuntu-lates
     defaults:
-      run:
-        working-directory: 
-    strategy:
-      matrix:
-        node-version:
-          - 18.16.0
-    steps:
-      - uses: actions/checkout@v3
-        name: Setup jobs
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v3
-        name: Setup environment
-        with:
-          node-version: 
-      - name: Install dependencies
-        run: npm install --global yarn && yarn
-      - name: Building
-        run: yarn run build`}
+    run:
+    working-directory: $\{env.workDir}
+  strategy:
+    matrix:
+      node-version:
+        - 18.16.0
+  steps:
+    - uses: actions/checkout@v3
+      name: Setup jobs
+      with:
+        fetch-depth: 0
+    - uses: actions/setup-node@v3
+      name: Setup environment
+      with:
+      node-version: $\{ matrix.node-version }
+    - name: Install dependencies
+      run: npm install --global yarn && yarn
+    - name: Building
+      run: yarn run build
+`}
         </code>
-        <br/>
+        <br/> </pre>
         <h2>Explanation:</h2>
         <p>
       <code>name: Build React Application</code>
@@ -133,7 +134,7 @@ jobs:
 
       This GitHub Actions workflow file automates the process of building a React application, triggering on pushes to the "Vanshiljain-link" branch, installing dependencies, and then running the build script to generate the production-ready build of the application.
     </p>
-      </pre>
+     
     </div>
   );
 }

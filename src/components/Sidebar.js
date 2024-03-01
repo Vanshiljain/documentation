@@ -1,4 +1,3 @@
-// Sidebar.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaHome, FaCog, FaFileAlt, FaAngleDown, FaAngleUp } from 'react-icons/fa';
@@ -6,28 +5,43 @@ import './Sidebar.css'; // Import custom CSS
 
 const Sidebar = () => {
   const [isYamlFileOpen, setIsYamlFileOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   const toggleYamlFile = () => {
     setIsYamlFileOpen(!isYamlFileOpen);
   };
 
+  const toggleAbout = () => {
+    setIsAboutOpen(!isAboutOpen);
+  };
+
   return (
     <div className="sidebar">
-      <div className="sidebar-header">
-    
-      </div>
+      <div className="sidebar-header">DOCUMENTATION</div>
       <ul className="sidebar-menu">
         <li>
-          <Link to="/introduction">
-            <FaHome className="sidebar-icon" />
-            Introduction
-          </Link>
-        </li>
-        <li>
-          <Link to="/commands">
-            <FaCog className="sidebar-icon" />
-            Commands
-          </Link>
+          <div onClick={toggleAbout} className="sidebar-item">
+            <span className="yaml-config">About STG-CLI</span>
+            {isAboutOpen ? <FaAngleUp className="sidebar-dropdown-icon" /> : <FaAngleDown className="sidebar-dropdown-icon" />}
+          </div>
+          {isAboutOpen && (
+            <ul className="sub-menu">
+              <li>
+                <Link to="/introduction">Introduction</Link>
+              </li>
+              <li>
+                <Link to="/overview">Overview</Link>
+              </li>
+              <li>
+                <Link to="/commands" className="sidebar-item">
+                           Commands
+                </Link>
+              </li>
+              <li>
+                <Link to="/benefit">Benefits of stg-cli</Link>
+              </li>
+            </ul>
+          )}
         </li>
         <li>
           <div onClick={toggleYamlFile} className="sidebar-item">
@@ -37,7 +51,7 @@ const Sidebar = () => {
           </div>
           {isYamlFileOpen && (
             <ul className="sub-menu">
-               <li>
+              <li>
                 <Link to="Starter-pipeline">Starter Pipeline</Link>
               </li>
               <li>

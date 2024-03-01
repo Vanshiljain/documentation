@@ -15,9 +15,10 @@
 .sidebar-header {
   padding: 20px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Adjust font size */
   font-weight: bold;
-  border-bottom: 1px solid #444;
+  color: #fff; /* Set text color */
+  background-color: burlywood; /* Set background color */
 }
 
 .sidebar-menu {
@@ -38,11 +39,11 @@
 }
 
 .sidebar-menu li a:hover {
-  background-color:blueviolet;
+  background-color:grey;
 }
 
 .sidebar-icon {
-  margin-right: 10px;
+  margin-left: 1px;
 }
 
 .sidebar-item {
@@ -56,13 +57,14 @@
 }
 
 .sub-menu {
-  list-style-type: none;
+  list-style-type: circle;
   padding: 0;
-  margin-top: 5px;
+  margin-top: 2px;
 }
 
 .sub-menu li {
-  padding: 10px 40px;
+  list-style-type: disc;
+  padding: 2px 2px;
 }
 .yaml-config {
   color: black;
@@ -75,5 +77,5 @@
 }
 
 .sub-menu li a:hover {
-  color:pink;
+  color:black;
 }

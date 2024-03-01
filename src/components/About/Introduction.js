@@ -1,11 +1,11 @@
 // Introduction.js
 import React from 'react';
-import './content.css';
+import '../content.css';
 const Introduction = () => {
   return (
     <div>
         <p className="introduction-paragraph">
-        `Welcome to the Onetab CLI documentation! Onetab CLI is a robust Node.js command-line interface (CLI) tool crafted to simplify the initiation and management of applications within a predefined pipeline configuration. This tool seamlessly integrates with GitHub Actions workflows locally and Docker, offering a streamlined approach to your development processes.</p>
+        Welcome to the Onetab CLI documentation! Onetab CLI is a robust Node.js command-line interface (CLI) tool crafted to simplify the initiation and management of applications within a predefined pipeline configuration. This tool seamlessly integrates with GitHub Actions workflows locally and Docker, offering a streamlined approach to your development processes.</p>
         <h2>Key Features</h2>
       <ul>
         <li>
